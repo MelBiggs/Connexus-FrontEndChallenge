@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Connexus</title>
+	<title>Connexus Task</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,7 +15,7 @@
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<!-- CSS  -->
-	<link href="style.css" rel="stylesheet" />
+	<link href="static/css/style.css" rel="stylesheet" />
 
 </head>
 
@@ -41,15 +41,19 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">Get in touch</a>
 					</li>
+				</ul>
 			</div>
 		</nav>
 
 		<!-- BANNER -->
 
 		<div class="container-fluid banner">
+			<!-- IMAGE FOR TABLET -->
+			<img src="static/img/banner-woman-transparent.png"
+				class="d-none d-md-block d-lg-none img-fluid background-img-tablet" alt="Responsive image">
 			<div class="row">
 				<!-- BANNER TEXT -->
-				<div class="col-lg-5 col-md-8 col-sm-12 banner-text">
+				<div class="col-lg-5 col-md-10 col-sm-12 banner-text">
 					<div class="headstart">
 						<span>Giving you the</span><br><span class="font-weight-bold">headstart</span><span> you
 							need</span>
@@ -59,20 +63,22 @@
 							lectus eget elit
 							semper faucibus. Proin pretium neque nec odio feugiat, a mollis neque gravida.</span>
 					</div>
-					<div id="buttons">
+					<div class="buttons">
 						<button type="button" class="btn btn-primary">Get started</button>
 						<button type="button" class="btn btn-secondary">Learn more</button>
 					</div>
 				</div>
+				<!-- <div class=" col-md-2 d-none d-md-block d-lg-none"><img src="img/banner-woman-transparent.png" class="img-fluid background-img-tablet" alt="Responsive image"></div> -->
+
 				<div class="col-lg-2 d-none d-lg-block">
 
 				</div>
 				<!-- BANNER IMAGE -->
 				<div class="col-lg-5 d-none d-lg-block">
-					<img src="img/banner-woman-transparent.png" class="img-fluid header-img" alt="Responsive image">
+					<img src="static/img/banner-woman-transparent.png" class="img-fluid header-img"
+						alt="Responsive image">
 				</div>
 			</div>
-
 		</div>
 	</section>
 
@@ -97,7 +103,7 @@
 							sapien, sit amet facilisis enim velit vitae dolor. Etiam semper quis leo id eleifend.
 							Quisque arcu dolor, sollicitudin sed facilisis eget, consectetur at est.</span>
 					</div>
-					<div id="buttons">
+					<div class="buttons">
 						<button type="button" class="btn btn-primary about-btn">Get started</button>
 					</div>
 				</div>
@@ -112,21 +118,34 @@
 							<br> Terms and conditions apply.</div>
 					</div>
 					<form>
-						<div class="form-group">
-							<label class="form-labels" for="name">Your Name</label>
-							<input type="name" class="form-control" id="input-name">
+						<div class="row">
+							<div class="col-lg-12 col-md-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-labels" for="name">Your Name</label>
+									<input type="name" class="form-control" id="input-name">
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-labels" for="emailAddress">Email address</label>
+									<input type="email" class="form-control" id="exampleInputEmail1"
+										aria-describedby="emailHelp">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-check">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="privacy-check">
+										<label class="form-check-label" for="privacy-check">
+											I have read and agree to the privacy policy
+										</label>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="form-group">
-							<label class="form-labels" for="emailAddress">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail1"
-								aria-describedby="emailHelp">
+						<div class="buttons">
+							<button type="button" class="btn btn-primary form-btn">Get started</button>
 						</div>
-						<div class="form-check">
-							<input type="checkbox" class="form-check-input" id="privacy-check">
-							<label class="form-check-label" for="privacy-check">I have read and agree to the privacy
-								policy</label>
-						</div>
-						<button type="button" class="btn btn-primary form-btn">Get started</button>
 					</form>
 				</div>
 			</div>
@@ -147,25 +166,75 @@
 				</div>
 			</div>
 			<div class="row speedy-row">
+
+				<!-- SMALLER SCREENS SLIDER -->
+
+				<!-- Slideshow container -->
+				<div class="slideshow-container d-lg-none">
+
+					<!-- Full-width slides/quotes -->
+					<div class="mySlides">
+						<i class="far fa-clock"></i>
+						<div class="speedy-response">Speedy response</div>
+						<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+							imperdiet
+							lectus eget elit semper faucibus.</div>
+					</div>
+
+					<div class="mySlides">
+						<i class="far fa-clock"></i>
+						<div class="speedy-response">Speedy response</div>
+						<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+							imperdiet
+							lectus eget elit semper faucibus.</div>
+					</div>
+
+					<div class="mySlides">
+						<i class="far fa-clock"></i>
+						<div class="speedy-response">Speedy response</div>
+						<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+							imperdiet
+							lectus eget elit semper faucibus.</div>
+					</div>
+
+					<!-- Next/prev buttons -->
+					<a class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+					<a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+
+
+					<!-- Dots/bullets/indicators -->
+					<div class="dot-container">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+					</div>
+				</div>
+
+				<!-- LARGE SCREEN FEATURES -->
+
 				<div class="col-lg-4 d-none d-lg-block">
 					<i class="far fa-clock"></i>
-					<div class= "speedy-response">Speedy response</div>
-					<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet lectus eget elit semper faucibus.</div>
+					<div class="speedy-response">Speedy response</div>
+					<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet
+						lectus eget elit semper faucibus.</div>
 				</div>
 				<div class="col-lg-4 d-none d-lg-block">
 					<i class="far fa-clock"></i>
-					<div class= "speedy-response">Speedy response</div>
-					<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet lectus eget elit semper faucibus.</div>
+					<div class="speedy-response">Speedy response</div>
+					<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet
+						lectus eget elit semper faucibus.</div>
 				</div>
 				<div class="col-lg-4 d-none d-lg-block">
 					<i class="far fa-clock"></i>
-					<div class= "speedy-response">Speedy response</div>
-					<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet lectus eget elit semper faucibus.</div>
+					<div class="speedy-response">Speedy response</div>
+					<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet
+						lectus eget elit semper faucibus.</div>
 				</div>
 			</div>
+
 			<div class="row feature-btn d-flex justify-content-center">
-			<button type="button" class="btn btn-secondary feature-btn">Learn more</button>
-		</div>
+				<button type="button" class="btn btn-secondary feature-btn">Learn more</button>
+			</div>
 		</div>
 	</section>
 
@@ -173,11 +242,15 @@
 		<!-- SOCIAL LINKS -->
 		<div>
 			<ul class="social-links">
-				<li><a target="_blank" href=""><i class="fab fa-facebook-square" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
-				<li><a target="_blank" href=""><i class="fab fa-youtube" aria-hidden="true"></i><span class="sr-only">YouTube</span></a></li>
-				<li><a target="_blank" href=""><i class="fab fa-twitter-square" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
-				<li><a target="_blank" href="https://www.linkedin.com/in/melissa-biggs-81424bb6/"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
-			</li>
+				<li><a target="_blank" href=""><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+							class="sr-only">Facebook</span></a></li>
+				<li><a target="_blank" href=""><i class="fab fa-youtube" aria-hidden="true"></i><span
+							class="sr-only">YouTube</span></a></li>
+				<li><a target="_blank" href=""><i class="fab fa-twitter-square" aria-hidden="true"></i><span
+							class="sr-only">Twitter</span></a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/in/melissa-biggs-81424bb6/"><i
+							class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+				</li>
 			</ul>
 		</div>
 		<hr>
@@ -194,7 +267,10 @@
 		<hr>
 		<!-- LEGAL -->
 		<div class="disclaimer">
-			<span class="legal">Integer consectetur ultrices ligula quis vestibulum. Donec turpis lectus, egestas vitae varius pharetra, tempor a nibh. Nunc dapibus ipsum et quam lobortis, vitae fermentum metus tristique. Morbi mollis, est vel condimentum cursus, nunc purus mollis sapien, sit amet facilisis enim velit vitae dolor.</span>
+			<span class="legal">Integer consectetur ultrices ligula quis vestibulum. Donec turpis lectus, egestas vitae
+				varius pharetra, tempor a nibh. Nunc dapibus ipsum et quam lobortis, vitae fermentum metus tristique.
+				Morbi mollis, est vel condimentum cursus, nunc purus mollis sapien, sit amet facilisis enim velit vitae
+				dolor.</span>
 		</div>
 	</section>
 
@@ -209,7 +285,7 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 	<!-- Core JS-->
-	<script src="js/scripts.js"></script>
+	<script src="static/js/scripts.js"></script>
 </body>
 
 </html>

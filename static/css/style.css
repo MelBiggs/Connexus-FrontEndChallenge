@@ -12,6 +12,8 @@
 
 /* DESKTOP */
 
+/* NAVBAR */
+
 .navbar {
     background: rgba(80,134,204,1);
 }
@@ -31,6 +33,125 @@
 .nav-link {
     color: white!important;
 }
+
+/* NAVBAR OVERLAY FOR MOBILE & TABLET */
+
+.navbar-collapse.collapsing .navbar-nav {
+    display: block;
+    position: fixed;
+    left: -25%;
+    transition: all 0.2s ease;
+    border-radius: 40px;
+}
+
+.navbar-collapse.show .navbar-nav {
+    position: fixed;
+    bottom: 0;
+    top:0;
+    right: 0;
+    flex-direction: column;
+    height: auto;
+    width: 45%;
+    transition: left 0.35s ease;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.navbar-toggler {
+    z-index: 5000;
+}
+
+.navbar-collapse.show ul {
+    font-size: 1.5em;
+    padding: 4em 2em 0em 2em;
+}
+
+.collapse-hr {
+    left: 0;
+    height: 1px;
+}
+
+.animated-icon1  {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    }
+
+    .animated-icon1 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    animation-delay: 2s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    }
+    
+    .animated-icon1 span {
+    background: white;
+    -webkit-text-stroke: 2px black;
+    }
+    .animated-icon1 span:onclick {
+        background: black;
+        }
+    
+    .animated-icon1 span:nth-child(1) {
+    top: 0px;
+    }
+    
+    .animated-icon1 span:nth-child(2) {
+    top: 10px;
+    }
+    
+    .animated-icon1 span:nth-child(3) {
+    top: 20px;
+    }
+    
+    .animated-icon1.open span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    background-color: black;
+    }
+    
+    .animated-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+    background-color: black;
+    }
+    
+    .animated-icon1.open span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    background-color: black;
+    }
 
 .banner {
     background: rgba(80,134,204,1);
@@ -190,6 +311,10 @@
     align-content: center;
 }
 
+.has-error input[type="text"], .has-error input[type="email"], .has-error select {
+    border: 1px solid #a94442;
+}
+
  /* FEATURES */
 
 
@@ -318,6 +443,7 @@ hr {
     font-size: .5em;
 }
 
+
 /* MEDIA QUERIES */
 
 /* Media Query for Mobile Devices */ 
@@ -327,8 +453,25 @@ hr {
         margin: 0;
         padding: 0;
     }
+    .navbar-collapse.show .navbar-nav {
+        position: fixed;
+        bottom: 0;
+        top:0;
+        right: 0;
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        transition: left 0.35s ease;
+        color: black;
+        background-color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        border-radius: 30px 0px 0px 30px;
+    }
+    .nav-link {
+        color: #5086CC!important;
+    }
     .banner{
-        height: 65vh;
         padding-top: 2em;
     }
     .banner-text {
@@ -371,11 +514,68 @@ hr {
 
 /* Media Query for Mobile to Tablet Sizes */
 @media (max-width: 767px) { 
-  
+    .banner-text {
+        padding: 1em 1em 1em 1em;
+    }
+    .about {
+        padding-right: 0em;
+    }
+    .buttons button {
+        width: 90%;
+        margin-top: 1em;
+    }
+    .about-section {
+        padding: 2em 3em 2em 3em;
+    }
+    .quick-links {
+        list-style: none;
+        text-align: center;
+        margin-top: .5em;
+    }
+    .quick-links li {
+        display: inline-block;
+        font-size: .5em;
+        margin-right: 1em;
+        padding-right: 1em;
+    }
+    /* .navbar-collapse.collapsing .navbar-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -40%;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        flex-direction: column;
+        height: auto;
+        width: 40%;
+        transition: left 0.35s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        z-index: 900 !important;
+        background-color: red;
+        
+    }
+    .navbar-items {
+        width: 100%;
+        height: 100%;
+        z-index: 800;
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        background: rgba(20,20,20,0.6) !important;
+    } */
+
 }
           
 /* Media Query for Tablets  */ 
-@media (min-width: 768px) and (max-width: 1250px){ 
+@media (min-width: 768px) and (max-width: 990px){ 
     .banner{
         height: 40vh;
         padding-top: 2em;
@@ -385,7 +585,7 @@ hr {
         background-size: 20%;   */
     }
     .banner img {
-        z-index: 1;
+        /* z-index: 1; */
         vertical-align: bottom;
         float: right;
         opacity: .6;
@@ -394,7 +594,7 @@ hr {
     } 
     .banner-text {
         padding: 0em 0em 0em 2em;
-        z-index: 200;
+        /* z-index: 200; */
     }
     .Lorem-banner {
         font-size: 1.5em;
@@ -430,6 +630,10 @@ hr {
         text-align:center;
         margin-left: 7.5%;
     }
+    
+    .nav-link {
+        color: #5086CC!important;
+    }
 
 
 
@@ -437,14 +641,13 @@ hr {
 /* Slideshow container */
 
     .slideshow-container .dot-container {
-        display: flex;
         flex-wrap: wrap;
         align-content: center
     }
   
   /* Slides */
     .mySlides {
-    display: none;
+    /* display: none; */
     padding: 80px;
     text-align: center;
   }
@@ -500,3 +703,17 @@ hr {
     background-color: #717171;
   }
 }
+
+/* Media Query for Large Tablets e.g.iPad Pro  */ 
+@media (min-width: 991px) and (max-width: 1030px){ 
+    .banner img {
+        height: 100%;
+        width: 90%;
+    } 
+    .btn-primary {
+        padding: .5em 1em;
+    }
+    .btn-secondary{
+        padding: .5em 1em;
+    }
+} 

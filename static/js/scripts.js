@@ -1,4 +1,6 @@
 
+
+// Hamburger Menu for Smaller Screens
 $(document).ready(function () {
   
   $('.animated-button').on('click', function () {
@@ -7,6 +9,10 @@ $(document).ready(function () {
   });
 
 });
+
+// $('#myCarousel').carousel({
+//   interval: 5000
+// })
 
 
 // var slideIndex = 1;

@@ -18,9 +18,9 @@ Using Chrome DevTools, I could simulate mobile and tablet devices with Device Mo
 
 For the *Features & Benefits* carousel for tablets and medium sized screens, I had to implement Bootstrap rows within the `carousel-item` div. This disabled the arrow navigation.
 
-I also hoped to include the use of an npm to set up a JavaScript framework e.g React.
+I also hoped to include the use of an npm to set up a JavaScript framework e.g. React.
 
-I was unable to fix or continue with the above due to time restraints, but I have included my attempts as commented out code or as files on this project. 
+I was unable to fix, or continue with, the above due to time restraints, but I have included my attempts as commented out code or as files on this project. 
 
 
 Thank you for taking the time to review this project. I hope you like it!

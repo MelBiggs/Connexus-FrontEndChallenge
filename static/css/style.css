@@ -11,8 +11,6 @@
     overflow-x: auto; 
 }
 
-/* DESKTOP */
-
 /* NAVBAR */
 
 .navbar {
@@ -95,7 +93,7 @@
     cursor: pointer;
     }
 
-    .animated-icon1 span {
+.animated-icon1 span {
     display: block;
     position: absolute;
     height: 3px;
@@ -114,27 +112,28 @@
     transition: .25s ease-in-out;
     }
     
-    .animated-icon1 span {
+.animated-icon1 span {
     background: white;
     -webkit-text-stroke: 2px black;
     }
-    .animated-icon1 span:onclick {
+
+.animated-icon1 span:onclick {
         background: black;
         }
     
-    .animated-icon1 span:nth-child(1) {
+.animated-icon1 span:nth-child(1) {
     top: 0px;
     }
     
-    .animated-icon1 span:nth-child(2) {
+.animated-icon1 span:nth-child(2) {
     top: 10px;
     }
     
-    .animated-icon1 span:nth-child(3) {
+.animated-icon1 span:nth-child(3) {
     top: 20px;
     }
     
-    .animated-icon1.open span:nth-child(1) {
+.animated-icon1.open span:nth-child(1) {
     top: 11px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
@@ -143,13 +142,13 @@
     background-color: black;
     }
     
-    .animated-icon1.open span:nth-child(2) {
+.animated-icon1.open span:nth-child(2) {
     opacity: 0;
     left: -60px;
     background-color: black;
     }
     
-    .animated-icon1.open span:nth-child(3) {
+.animated-icon1.open span:nth-child(3) {
     top: 11px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
@@ -323,8 +322,8 @@
     align-content: center;
 }
 
-.has-error input[type="text"], .has-error input[type="email"], .has-error select {
-    border: 1px solid #a94442;
+.text-danger {
+    font-size: .8em;
 }
 
  /* FEATURES */
@@ -386,6 +385,7 @@
  .speedy-mobile {
     color: white;
 }
+
 .carousel-indicators li {
     width: 10px;
     height: 10px;
@@ -474,7 +474,6 @@ hr {
 .legal {
     font-size: .5em;
 }
-
 
 /* MEDIA QUERIES */
 

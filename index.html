@@ -124,18 +124,20 @@
 							us.
 							<br> Terms and conditions apply.</div>
 					</div>
-					<form>
+					<form id="signup-form">
 						<div class="row">
 							<div class="col-lg-12 col-md-6 col-sm-12">
 								<div class="form-group">
 									<label class="form-labels" for="name">Your Name</label>
+									<p class="text-danger" hidden id="input-name-error"></p>
 									<input type="name" class="form-control" id="input-name">
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-6 col-sm-12">
 								<div class="form-group">
 									<label class="form-labels" for="emailAddress">Email address</label>
-									<input type="email" class="form-control" id="exampleInputEmail1"
+									<p class="text-danger" hidden id="input-email-error"></p>
+									<input type="email" class="form-control" id="InputEmail"
 										aria-describedby="emailHelp">
 								</div>
 							</div>
@@ -151,7 +153,7 @@
 							</div>
 						</div>
 						<div class="buttons">
-							<button type="button" class="btn btn-primary form-btn">Get started</button>
+							<button type="button" class="btn btn-primary form-btn" id="submit-form">Get started</button>
 						</div>
 					</form>
 				</div>
@@ -206,134 +208,65 @@
 				<ol class="carousel-indicators">
 					<li data-target="#carouselContent" data-slide-to="0" class="active"></li>
 					<li data-target="#carouselContent" data-slide-to="1"></li>
-					<li data-target="#carouselContent" data-slide-to="2"></li>
 				</ol>
 			</div>
 		</div>
 
 		<!-- TABLET FEATURES CAROUSEL -->
 
-		<!-- <div class="container text-center my-3 d-none d-md-block d-lg-none">
+		<div class="container text-center my-3 d-none d-md-block d-lg-none">
 			<div class="row mx-auto my-auto">
-				<div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+				<div id="carouselContent" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner" role="listbox">
-
-						<div class="carousel-item py-5">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="card">
-										<div class="card-body">
-											<h4 class="card-title">Card</h4>
-											<p class="card-text">Some make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Button</a>
-										</div>
-									</div>
+						<div class="carousel-item py-5 active">
+							<div class="row speedy-row">
+								<div class="col-sm-6">
+									<i class="far fa-clock"></i>
+									<div class="speedy-response">Speedy response 1</div>
+									<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Donec
+										imperdiet
+										lectus eget elit semper faucibus.</div>
 								</div>
-								<div class="col-md-6">
-									<div class="card">
-										<div class="card-body">
-											<h4 class="card-title">Card</h4>
-											<p class="card-text">Some make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Button</a>
-										</div>
-									</div>
+								<div class="col-sm-6">
+									<i class="far fa-clock"></i>
+									<div class="speedy-response">Speedy response 1</div>
+									<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Donec
+										imperdiet lectus eget elit semper faucibus.</div>
 								</div>
 							</div>
 						</div>
 						<div class="carousel-item py-5">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="card">
-										<div class="card-body">
-											<h4 class="card-title">Card</h4>
-											<p class="card-text">Some make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Button</a>
-										</div>
-									</div>
+							<div class="row speedy-row">
+								<div class="col-sm-6">
+									<i class="far fa-clock"></i>
+									<div class="speedy-response">Speedy response 2</div>
+									<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet lectus eget elit semper faucibus.</div>
+								</div>
+								<div class="col-sm-6">
+									<i class="far fa-clock"></i>
+									<div class="speedy-response">Speedy response 2</div>
+									<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet lectus eget elit semper faucibus.</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-12">
-							<a class="carousel-control-prev text-dark" href="#myCarousel" role="button"
-								data-slide="prev">
-								<span class="fa fa-chevron-left" aria-hidden="true"></span>
-								<span class="sr-only">Previous</span>
-							</a>
-							<a class="carousel-control-next text-dark" href="#myCarousel" role="button"
-								data-slide="next">
-								<span class="fa fa-chevron-right" aria-hidden="true"></span>
-								<span class="sr-only">Next</span>
-							</a>
-						</div>
-					</div>
+					<a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+					<ol class="carousel-indicators">
+						<li data-target="#carouselContent" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselContent" data-slide-to="1"></li>
+					</ol>
 				</div>
 			</div>
-		</div> -->
-
-
-
-		<!-- Slideshow container -->
-		<!-- <div class="slideshow-container justify-content-center d-none d-md-block d-lg-none">
-					<div class="medium-carousel carousel slide carousel-multi-item " data-ride="carousel"
-						id="medium-carousel">
-						<div class="row">
-							<ol class="carousel-indicators">
-								<li data-target="#medium-carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#medium-carousel" data-slide-to="1"></li>
-							</ol>
-							<div class="carousel-inner" role="list-box">
-								<div class="carousel-item active">
-									<div class="col-md-6">
-										<i class="far fa-clock"></i>
-										<div class="speedy-response">Speedy response</div>
-										<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-											elit.
-											Donec
-											imperdiet
-											lectus eget elit semper faucibus.</div>
-									</div>
-								</div>
-								<div class="carousel-item">
-									<div class="col-md-6">
-										<i class="far fa-clock"></i>
-										<div class="speedy-response">Speedy response 2</div>
-										<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-											elit.
-											Donec
-											imperdiet
-											lectus eget elit semper faucibus.</div>
-									</div>
-								</div>
-								<div class="carousel-item">
-									<div class="col-md-6">
-										<i class="far fa-clock"></i>
-										<div class="speedy-response">Speedy response 3</div>
-										<div class="response-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-											elit.
-											Donec
-											imperdiet
-											lectus eget elit semper faucibus.</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<a class="carousel-control-prev" href="#medium-carousel" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-
-						<a class="carousel-control-next" href="#medium-carousel" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-
-					</div>
-				</div> -->
-
-
+		</div>
 
 		<!-- LARGE SCREEN FEATURES -->
 		<div class="container-fluid">
@@ -413,7 +346,7 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 	<!-- Core JS-->
-	<script src="static/js/scripts.js"></script>
+	<script src="static/js/index.js"></script>
 
 </body>
 
